@@ -8,7 +8,9 @@ dependencies = [
     "alembic>=1.16.5",
     "fastapi[all]>=0.116.2",
     "httpx>=0.28.1",
+    "pandas>=2.3.2",
     "passlib[bcrypt]>=1.7.4",
     "python-jose[cryptography]>=3.5.0",
+    "scikit-learn>=1.7.2",
     "sqlalchemy>=2.0.43",
 ]

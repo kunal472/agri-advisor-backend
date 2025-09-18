@@ -1,6 +1,6 @@
 from datetime import datetime
 from pydantic import BaseModel
-from typing import Optional , List
+from typing import Optional , List, Any
 
 
 # Schema for user creation (request)
@@ -51,14 +51,16 @@ class Farm(FarmBase):
         orm_mode = True # This allows the model to be created from ORM objects
 
 class RecommendationBase(BaseModel):
-    recommendation_text: str
+    recommendation_text: Any
 
-class RecommendationCreate(RecommendationBase):
+class RecommendationCreate(BaseModel):
     farm_id: int
+    recommendation_text: Any
 
-class Recommendation(RecommendationBase):
+class Recommendation(BaseModel):
     id: int
     farm_id: int
+    recommendation_text: Any
     created_at: datetime
 
     class Config:

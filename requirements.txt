@@ -4,3 +4,5 @@ alembic
 python-jose[cryptography]
 passlib[bcrypt]
 httpx
+pandas 
+sckit-learn
